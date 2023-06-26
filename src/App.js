@@ -1,16 +1,19 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import WelcomePage from "./pages/WelcomePage";
-
-// 아래는 React Router 예시입니다.
-// 예시 Route 3가지는 지우고 시작해주세요!
+import NotFound from "./pages/NotFound";
+import Owner from "./pages/owner";
+import Create from "./pages/create";
+import Articles from "./pages/acticles";
+import Edit from "./pages/edit";
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<div>Home Page</div>} />
-        <Route path="/hello" element={<>Hello, World!</>} />
-        <Route path="/welcome/:name" element={<WelcomePage />} />
+        <Route path="/:ownerId" element={<Owner/>} />
+        <Route path="/:ownerId/create" element={<Create/>} />
+        <Route path="/articles/:articleId" element={<Articles/>} />
+        <Route path="/articles/:articleId/edit" element={<Edit/>} />
+        <Route path="*" element={<NotFound/>}/>
       </Routes>
     </BrowserRouter>
   );

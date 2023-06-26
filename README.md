@@ -97,7 +97,7 @@
 
 <br/>
 
-> http://localhost:3000/articles/:articleId/edit  
+> http://localhost:3000/articles/:articleId/edit
 > 방명록을 수정할 수 있는 페이지  
 > 수정을 완료하면 이전 페이지로 이동합니다.  
 
